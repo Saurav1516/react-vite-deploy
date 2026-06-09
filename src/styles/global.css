@@ -1,0 +1,149 @@
+/* =========================
+BRAND COLORS
+========================= */
+
+:root {
+  --offwhite: #e5e6e0;
+  --red: #c74437;
+  --black: #000;
+
+  /* FONTS */
+
+  --font-main: "Geist", sans-serif;
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-heading2: "El Messiri", sans-serif;
+  --font-heading3: "Cinzel", serif;
+  --font-mono: "Roboto Mono", monospace;
+  --font-ui: "Outfit", sans-serif;
+  --font-accent: "Playfair Display", serif;
+}
+
+/* =========================
+PREVENT WHITE FLASH
+========================= */
+
+html {
+  background: #000;
+}
+
+/* =========================
+SCROLL BEHAVIOR
+========================= */
+
+html,
+body {
+  scroll-behavior: auto;
+}
+
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.3px;
+}
+
+/* =========================
+GLOBAL FONT + BODY
+========================= */
+
+body {
+  background: var(--black);
+  color: var(--offwhite);
+  overflow-x: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* =========================
+SPLIT TEXT
+========================= */
+
+.split-char {
+  display: inline-block;
+}
+
+/* =========================
+OUTLINE HEADING
+========================= */
+
+.outline-white {
+  -webkit-text-stroke: 2px #ffffff;
+}
+.hero-outline-heading {
+  font-family: var(--font-heading3);
+  font-weight: 600;
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.86);
+  letter-spacing: 3px;
+  line-height: 1.1;
+}
+
+.outline-heading {
+  font-family: var(--font-heading3);
+  font-weight: 600;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.86);
+  letter-spacing: 3px;
+  line-height: 1.1;
+}
+
+/* =========================
+LINKS
+========================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .outline-heading {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  .hero-outline-heading {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .outline-heading {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .hero-outline-heading {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+  .outline-heading {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+  }
+  .hero-outline-heading {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+  }
+}

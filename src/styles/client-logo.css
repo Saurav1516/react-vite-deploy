@@ -1,0 +1,127 @@
+/* ================= SECTION ================= */
+
+.client-section {
+  background: #000;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+/* ================= SUBTEXT ================= */
+
+.client-subtext {
+  color: #aaa;
+  margin: 20px 0 60px;
+}
+
+/* ================= MARQUEE ================= */
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ================= TRACK ================= */
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* ================= LOGO ITEM ================= */
+
+.logo-item {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ================= IMAGE ================= */
+
+.logo-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+/* ================= BOTTOM TO TOP OVERLAY ================= */
+
+.logo-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff; /* change color if needed */
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.logo-item:hover::before {
+  width: 100%;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= FADE EDGES ================= */
+
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #000, transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #000, transparent);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 40px;
+  }
+
+  .logo-item {
+    height: 60px;
+    width: 60px;
+  }
+}

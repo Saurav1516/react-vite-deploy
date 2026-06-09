@@ -1,0 +1,125 @@
+/* =========================
+SECTION
+========================= */
+
+.contact-section {
+  padding: 80px 0;
+  color: #fff;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* DARK OVERLAY */
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* adjust 0.5–0.7 */
+  z-index: -1;
+}
+
+/* =========================
+FORM
+========================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus {
+  border-color: #ff0033;
+}
+
+.contact-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+WHATSAPP BUTTON
+========================= */
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 16px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #ff0033;
+  color: #fff;
+}
+
+/* =========================
+RIGHT CONTENT
+========================= */
+
+.contact-info p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* DETAILS */
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-details span {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ff0033;
+  text-transform: uppercase;
+}
+
+.contact-details p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 50px 0px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .contact-details p {
+    font-size: 14px;
+  }
+}

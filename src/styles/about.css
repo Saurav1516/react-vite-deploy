@@ -1,0 +1,96 @@
+/* ABOUT SECTION */
+
+.wmt-about {
+  position: relative;
+  padding: 80px 0;
+  color: white;
+
+  background:
+    radial-gradient(78% 97% at 19.8% 100%, #130f0d00 0%, #130f0d 100%),
+    url("../assets/images/dark-blur-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* DARK OVERLAY */
+
+.wmt-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* WRAPPER */
+
+.about-wrapper {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* WORD ANIMATION */
+/* WORD STYLE */
+
+/* WORD STYLE */
+.word {
+  display: inline-block;
+  margin-right: 6px;
+  color: #555; /* faded */
+  transition: color 0.3s ease;
+}
+
+/* HEADING */
+
+.about-title {
+  margin-bottom: 60px;
+}
+
+/* OUTLINE HEADING */
+
+/* TEXT */
+
+.about-content p {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  color: rgb(152, 152, 152);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .about-content p {
+    font-size: 16px;
+  }
+}
+/* Tablet */
+
+@media (max-width: 992px) {
+  .wmt-about {
+    padding: 60px 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .wmt-about {
+    padding: 50px 0;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+  .wmt-about {
+    padding: 50px 0;
+  }
+}

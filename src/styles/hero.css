@@ -1,0 +1,36 @@
+/* ================= HERO ================= */
+
+.hero {
+  width: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+/* ================= VIDEO ROW ================= */
+
+.video-row {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ================= VIDEO ================= */
+
+.hero-video {
+  /* margin-top: 100px; */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero-video {
+    height: 45vh;
+  }
+
+  .film-strip {
+    height: 40px;
+  }
+}

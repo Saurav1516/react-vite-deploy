@@ -1,0 +1,141 @@
+/* =========================
+   WMT FILMS FOOTER
+========================= */
+
+.wmt-footer {
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: 90px 0 30px;
+}
+
+/* CONTAINER */
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+/* LOGO */
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* TEXT */
+
+.footer-col p {
+  font-family: var(--font-mono);
+  line-height: 1.7;
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* TITLES */
+
+.footer-title {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* LINKS */
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-col li:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+/* SOCIAL ICONS */
+
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .wmt-footer {
+    padding: 70px 0 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 35px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}

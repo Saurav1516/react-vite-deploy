@@ -1,0 +1,191 @@
+/* =========================
+SECTION
+========================= */
+
+.projects-section {
+  background: #000;
+  padding-top: 80px;
+}
+
+/* =========================
+COLUMN
+========================= */
+
+.project-col {
+  margin-bottom: 40px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.project-card {
+  position: relative;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  overflow: hidden;
+
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================
+FULL DARK OVERLAY
+========================= */
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.65)
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* =========================
+FULL NOISE (STATIC 🔥)
+========================= */
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../assets/images/noise.png");
+  background-size: 140px;
+
+  opacity: 0;
+  mix-blend-mode: overlay;
+
+  pointer-events: none;
+  z-index: 2;
+
+  transition: opacity 0.3s ease;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.project-title {
+  position: relative;
+  z-index: 3;
+
+  color: #fff;
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 1px;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+IMAGE
+========================= */
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+/* =========================
+PLAY BUTTON
+========================= */
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  z-index: 4;
+}
+
+/* =========================
+HOVER EFFECT (CLEAN 🔥)
+========================= */
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover::after {
+  opacity: 0.60; /* 👈 adjust here */
+}
+
+.project-card:hover .play-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .project-image img {
+    height: 220px;
+  }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .project-image img {
+    height: 200px;
+  }
+
+  .play-button {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+}

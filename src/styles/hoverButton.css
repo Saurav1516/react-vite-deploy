@@ -1,0 +1,75 @@
+@keyframes shake {
+  25% {
+    transform: rotate(calc(var(--angle) * -1));
+  }
+  50% {
+    transform: rotate(var(--angle));
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.HOVER {
+  font-family: "Geist", sans-serif;;
+  font-size: 15px;
+  --width: 100%;
+  --time: 0.7s;
+  border: 1px solid #363636e0;
+  border-radius: 40px;
+  position: relative;
+  display: inline-block;
+  padding: 7px 12px;
+  color: #000000;
+  background: #2c282800;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.HOVER span:last-child {
+  position: relative;
+  z-index: 5;
+  transition: color var(--time);
+}
+
+.HOVER:hover span:last-child {
+  color: #fff;
+}
+
+.HOVER span:first-child {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: #000;
+  transform: translate(-50%, -50%);
+  transition:
+    width var(--time),
+    padding-top var(--time);
+  top: 50%;
+  left: 50%;
+}
+
+.HOVER:hover span:first-child {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
+}
+
+.HOVER.FLASH span:first-child {
+  background: #ff3b3b;
+}
+
+.animated {
+  --angle: 5deg;
+  animation: 0.3s shake;
+}
+
+@media (max-width: 480px) {
+  .HOVER {
+    font-size: 13px;
+  }
+}
